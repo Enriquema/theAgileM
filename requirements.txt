@@ -1,2 +1,4 @@
+Django
 djangorestframework
+# Library for django media files
 Pillow
