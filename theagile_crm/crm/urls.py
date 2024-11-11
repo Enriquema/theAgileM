@@ -17,7 +17,7 @@ Including another URLconf
 from django.urls import path, include
 from . import views
 from rest_framework.routers import DefaultRouter
-from crm.views import CustomerModelViewSet
+from .views import CustomerModelViewSet
 
 router = DefaultRouter()
 

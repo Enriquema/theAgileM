@@ -17,8 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from rest_framework.routers import DefaultRouter
+from .views import UserModelViewSet
+
+router = DefaultRouter()
+
+# Register View Class with Router
+router.register('user', UserModelViewSet, basename='user_')
 
 urlpatterns = [
     path('', include('django.contrib.auth.urls')),
     path('register/', views.register, name='register'),
+    path('api/', include(router.urls)),
 ]
